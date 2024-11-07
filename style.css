@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8; /* Light pastel background */
+}
+
+header {
+    position: relative;
+    background: #ffccbc; /* Pastel peach */
+    color: #333;
+    padding: 20px;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default; shown on smaller screens */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffab40; /* Pastel orange on hover */
+}
+
+/* Responsive styles for the hamburger menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column; /* Stack them vertically */
+        position: absolute;
+        top: 60px; /* Adjust this value based on your header height */
+        left: 0;
+        width: 100%;
+        background: #ffccbc; /* Background color to match header */
+    }
+
+    nav ul.active {
+        display: flex; /* Show links when active */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Margin for vertical spacing */
+    }
+}
+
+.hero {
+    background: linear-gradient(to right, #ffe0b2, #ffe57f); /* Pastel gradient */
+    color: #333;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta-button {
+    background: #ffcc80; /* Pastel yellow */
+    color: #333;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s; /* Include box-shadow in transition */
+}
+
+.cta-button:hover {
+    background: #ffd54f; /* Darker pastel yellow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* ABOUT SECTION */
+.about {
+    background-color: #e0f7fa; /* Pastel cyan */
+    color: #333;
+    border-radius: 8px;
+}
+
+/* SERVICES SECTION */
+.services {
+    background: #ffccbc; /* Pastel peach */
+    color: #333;
+    border-radius: 8px;
+}
+
+.service-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #f48fb1; /* Slightly darker pastel pink */
+    border-radius: 10px;
+    background: #fff; /* White background */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added shadow transition */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+    background-color: #b3e5fc; /* Pastel blue */
+    color: #333;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    border: 2px solid #ce93d8; /* Darker pastel lavender */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+    background-color: #c5e1a5; /* Pastel green */
+    color: #333;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* BLOG SECTION */
+.blog {
+    background-color: #b3e5fc; /* Pastel blue */
+    color: #333;
+    padding: 60px 20px;
+    border-radius: 8px;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background-color: #ffe082; /* Pastel yellow */
+    color: #333;
+    padding: 60px 20px;
+    border-radius: 8px;
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0; /* Space between inputs */
+}
+
+input[type="submit"] {
+    background: #ffcc80; /* Match button color */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #ffd54f; /* Darker pastel yellow on hover */
+}
+
+/* Footer Enhancements */
+footer {
+    background: #ffcc80; /* Light pastel yellow */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #333; /* Link color */
+    text-decoration: none; /* No underline */
+    margin: 0 10px; /* Spacing between links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
