@@ -18,6 +18,14 @@ const navMenu = document.getElementById('nav-menu').querySelector('ul');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active'); // Toggle the active class to show/hide the menu
-});
+}) 
 
+
+
+// Lightbox2 configuration (optional)
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'alwaysShowNavOnTouchDevices': true
+});
 

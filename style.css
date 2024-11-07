@@ -102,6 +102,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s, box-shadow 0.3s; /* Include box-shadow in transition */
+
 }
 
 .cta-button:hover {
@@ -145,6 +146,7 @@ h2 {
 .service-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background: #f8f8f8; /* Lighten the background on hover */
 }
 
 /* PORTFOLIO SECTION */
@@ -172,6 +174,43 @@ h2 {
     width: 100%;
     height: auto;
 }
+/* Portfolio Section */
+.portfolio-item img {
+    width: 100%; /* Make the image width responsive to its container */
+    max-width: 400px; /* Limit the width to a smaller size */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image if it's smaller than the container */
+}
+
+/* Service Section */
+.service-item img {
+    width: 100%; /* Make the image responsive */
+    max-width: 250px; /* Limit the image width */
+    height: auto;
+    margin: 0 auto; /* Center the image */
+}
+
+/* General Image Styling */
+img {
+    max-width: 100%; /* Ensure images don’t overflow the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* TESTIMONIALS SECTION */
 .testimonials {
@@ -232,16 +271,49 @@ footer {
     background: #ffcc80; /* Light pastel yellow */
     color: #333;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    padding: 30px 20px;
+    font-size: 16px;
 }
 
 footer a {
-    color: #333; /* Link color */
-    text-decoration: none; /* No underline */
-    margin: 0 10px; /* Spacing between links */
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
 }
 
 footer a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styling for form elements */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #ffab40; /* Light orange border on focus */
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px; /* Less padding on mobile */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Smaller title for mobile */
+    }
+
+    .cta-button {
+        padding: 12px 20px; /* Smaller button padding on mobile */
+    }
+
+    .section {
+        padding: 40px 20px; /* Reduce section padding on mobile */
+    }
 }
