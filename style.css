@@ -1,9 +1,11 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -11,6 +13,7 @@ body {
     background-color: #f0f4f8; /* Light pastel background */
 }
 
+/* Header Styling */
 header {
     position: relative;
     background: #ffccbc; /* Pastel peach */
@@ -18,12 +21,19 @@ header {
     padding: 20px;
 }
 
+/* Hamburger Menu */
 .hamburger {
     font-size: 30px;
     cursor: pointer;
     display: none; /* Hidden by default; shown on smaller screens */
+    color: #333;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2; /* Ensure it appears above other elements */
 }
 
+/* Navigation Styling */
 nav {
     display: flex;
     justify-content: space-between;
@@ -37,10 +47,7 @@ nav h1 {
 nav ul {
     list-style: none;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
+    gap: 30px;
 }
 
 nav ul li a {
@@ -58,19 +65,18 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .hamburger {
         display: block; /* Show hamburger icon on smaller screens */
-        position: absolute;
-        right: 20px;
-        top: 20px;
     }
 
     nav ul {
         display: none; /* Hide the navigation links by default */
-        flex-direction: column; /* Stack them vertically */
+        flex-direction: column;
+        align-items: center;
         position: absolute;
-        top: 60px; /* Adjust this value based on your header height */
+        top: 60px;
         left: 0;
         width: 100%;
-        background: #ffccbc; /* Background color to match header */
+        background: #ffccbc; /* Match background color to header */
+        padding: 20px 0;
     }
 
     nav ul.active {
@@ -78,10 +84,11 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        margin: 10px 0; /* Margin for vertical spacing */
+        margin: 10px 0; /* Spacing for vertical menu items */
     }
 }
 
+/* Hero Section */
 .hero {
     background: linear-gradient(to right, #ffe0b2, #ffe57f); /* Pastel gradient */
     color: #333;
@@ -101,15 +108,15 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s, box-shadow 0.3s; /* Include box-shadow in transition */
-
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
     background: #ffd54f; /* Darker pastel yellow on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Section Styling */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -120,14 +127,14 @@ h2 {
     font-weight: 700;
 }
 
-/* ABOUT SECTION */
+/* About Section */
 .about {
     background-color: #e0f7fa; /* Pastel cyan */
     color: #333;
     border-radius: 8px;
 }
 
-/* SERVICES SECTION */
+/* Services Section */
 .services {
     background: #ffccbc; /* Pastel peach */
     color: #333;
@@ -140,16 +147,16 @@ h2 {
     border: 2px solid #f48fb1; /* Slightly darker pastel pink */
     border-radius: 10px;
     background: #fff; /* White background */
-    transition: transform 0.3s, box-shadow 0.3s; /* Added shadow transition */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    background: #f8f8f8; /* Lighten the background on hover */
+    background: #f8f8f8; /* Lightened background on hover */
 }
 
-/* PORTFOLIO SECTION */
+/* Portfolio Section */
 .portfolio {
     background-color: #b3e5fc; /* Pastel blue */
     color: #333;
@@ -174,45 +181,26 @@ h2 {
     width: 100%;
     height: auto;
 }
-/* Portfolio Section */
+
+/* Portfolio Image Adjustments */
 .portfolio-item img {
-    width: 100%; /* Make the image width responsive to its container */
-    max-width: 400px; /* Limit the width to a smaller size */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the image if it's smaller than the container */
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-/* Service Section */
+/* Service Section Image Styling */
 .service-item img {
-    width: 100%; /* Make the image responsive */
-    max-width: 250px; /* Limit the image width */
-    height: auto;
-    margin: 0 auto; /* Center the image */
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 /* General Image Styling */
 img {
-    max-width: 100%; /* Ensure images don’t overflow the container */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* TESTIMONIALS SECTION */
+/* Testimonials Section */
 .testimonials {
     background-color: #c5e1a5; /* Pastel green */
     color: #333;
@@ -225,7 +213,7 @@ blockquote {
     margin: 20px 0;
 }
 
-/* BLOG SECTION */
+/* Blog Section */
 .blog {
     background-color: #b3e5fc; /* Pastel blue */
     color: #333;
@@ -233,7 +221,7 @@ blockquote {
     border-radius: 8px;
 }
 
-/* CONTACT SECTION */
+/* Contact Section */
 .contact {
     background-color: #ffe082; /* Pastel yellow */
     color: #333;
@@ -249,11 +237,11 @@ textarea {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: 10px 0; /* Space between inputs */
+    margin: 10px 0;
 }
 
 input[type="submit"] {
-    background: #ffcc80; /* Match button color */
+    background: #ffcc80;
     color: #333;
     padding: 10px 20px;
     border: none;
@@ -266,9 +254,9 @@ input[type="submit"]:hover {
     background: #ffd54f; /* Darker pastel yellow on hover */
 }
 
-/* Footer Enhancements */
+/* Footer Styling */
 footer {
-    background: #ffcc80; /* Light pastel yellow */
+    background: #ffcc80;
     color: #333;
     text-align: center;
     padding: 30px 20px;
@@ -283,7 +271,7 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 /* Smooth Scroll */
@@ -291,29 +279,29 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Focus styling for form elements */
+/* Focus Styling for Form Elements */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #ffab40; /* Light orange border on focus */
+    border-color: #ffab40;
     outline: none;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
-        padding: 100px 20px; /* Less padding on mobile */
+        padding: 100px 20px;
     }
 
     .hero h1 {
-        font-size: 1.5rem; /* Smaller title for mobile */
+        font-size: 1.5rem;
     }
 
     .cta-button {
-        padding: 12px 20px; /* Smaller button padding on mobile */
+        padding: 12px 20px;
     }
 
     .section {
-        padding: 40px 20px; /* Reduce section padding on mobile */
+        padding: 40px 20px;
     }
 }

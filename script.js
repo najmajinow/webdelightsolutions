@@ -12,13 +12,20 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     this.reset(); // Reset the form
 });
 
-// Toggle the menu on hamburger click
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu').querySelector('ul');
+ 
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active'); // Toggle the active class to show/hide the menu
-}) 
+// JavaScript for toggling the menu
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Toggle 'active' class on nav ul
+    });
+});
+
+
+
 
 
 
