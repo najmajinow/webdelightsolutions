@@ -305,3 +305,17 @@ textarea:focus {
         padding: 40px 20px;
     }
 }
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+}
+
