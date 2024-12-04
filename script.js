@@ -106,6 +106,23 @@ formFields.forEach(field => {
     });
 });
 
+// 7. Header Disappear/Appear on Scroll (remove hamburger menu)
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scroll down - hide header
+        header.style.top = "-80px"; // Adjust this value to hide the header completely
+    } else {
+        // Scroll up - show header
+        header.style.top = "0";
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+});
+
 // CSS to style new elements
 const style = document.createElement('style');
 style.textContent = `
@@ -122,10 +139,4 @@ style.textContent = `
     .lazy.loaded { opacity: 1; transition: opacity 0.3s; }
 `;
 
-
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav ul');
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+document.head.appendChild(style);
