@@ -9,15 +9,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f0f4f8; /* Light pastel background */
+    color: #000; /* Black text */
+    background-color: #f5f5f5; /* Light gray background */
 }
 
 /* Header Styling */
 header {
     position: relative;
-    background: #ffccbc; /* Pastel peach */
-    color: #333;
+    background: #f5f5f5; /* light gray */
+    color: #000; /* Black text */
     padding: 20px;
 }
 
@@ -25,73 +25,52 @@ header {
 .hamburger {
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Hidden by default; shown on smaller screens */
-    color: #333;
+    display: none; /* Hidden by default for larger screens */
+    color: #000;
     position: absolute;
     right: 20px;
     top: 20px;
-    z-index: 2; /* Ensure it appears above other elements */
+    z-index: 2;
 }
 
-/* Navigation Styling */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h1 {
-    font-weight: 700;
-}
-
+/* Navigation Menu Styling */
 nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Default layout for larger screens */
     gap: 30px;
 }
 
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffab40; /* Pastel orange on hover */
-}
-
-/* Responsive styles for the hamburger menu */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: block; /* Show hamburger icon on smaller screens */
     }
 
     nav ul {
-        display: none; /* Hide the navigation links by default */
+        display: none; /* Hide the menu by default on smaller screens */
         flex-direction: column;
         align-items: center;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        background: #ffccbc; /* Match background color to header */
+        background: #f5f5f5; /* Match header background */
         padding: 20px 0;
     }
 
     nav ul.active {
-        display: flex; /* Show links when active */
+        display: flex; /* Show menu when active */
     }
+}
 
-    nav ul li {
-        margin: 10px 0; /* Spacing for vertical menu items */
-    }
+nav ul li {
+    margin: 10px 0; /* Spacing for vertical menu items */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to right, #ffe0b2, #ffe57f); /* Pastel gradient */
-    color: #333;
+    background: #f5f5f5; /* Complementary color (gray) */
+    color: #000; /* Black text */
     text-align: center;
     padding: 150px 20px;
 }
@@ -102,8 +81,8 @@ nav ul li a:hover {
 }
 
 .cta-button {
-    background: #ffcc80; /* Pastel yellow */
-    color: #333;
+    background: #333; /* Dark gray */
+    color: #fff; /* White text */
     padding: 15px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -112,7 +91,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background: #ffd54f; /* Darker pastel yellow on hover */
+    background: #555; /* Lighter gray on hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
@@ -129,22 +108,22 @@ h2 {
 
 /* About Section */
 .about {
-    background-color: #e0f7fa; /* Pastel cyan */
-    color: #333;
+    background-color: #f5f5f5; /* Light gray */
+    color: #000; /* Black text */
     border-radius: 8px;
 }
 
 /* Services Section */
 .services {
-    background: #ffccbc; /* Pastel peach */
-    color: #333;
+    background:  grey; /* Complementary color (blue) */
+    color: #000; /* Black text */
     border-radius: 8px;
 }
 
 .service-item {
     margin-bottom: 30px;
     padding: 20px;
-    border: 2px solid #f48fb1; /* Slightly darker pastel pink */
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 10px;
     background: #fff; /* White background */
     transition: transform 0.3s, box-shadow 0.3s;
@@ -158,8 +137,8 @@ h2 {
 
 /* Portfolio Section */
 .portfolio {
-    background-color: #b3e5fc; /* Pastel blue */
-    color: #333;
+    background-color: #f5f5f5; /* Light gray */
+    color: #000; /* Black text */
     border-radius: 8px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -167,7 +146,7 @@ h2 {
 }
 
 .portfolio-item {
-    border: 2px solid #ce93d8; /* Darker pastel lavender */
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -180,12 +159,6 @@ h2 {
 .portfolio-item img {
     width: 100%;
     height: auto;
-}
-
-/* Portfolio Image Adjustments */
-.portfolio-item img {
-    max-width: 400px;
-    margin: 0 auto;
 }
 
 /* Service Section Image Styling */
@@ -202,8 +175,8 @@ img {
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #c5e1a5; /* Pastel green */
-    color: #333;
+    background-color: #f5f5f5; /* Light gray */
+    color: #000; /* Black text */
     padding: 40px;
     border-radius: 8px;
 }
@@ -213,21 +186,63 @@ blockquote {
     margin: 20px 0;
 }
 
-/* Blog Section */
-.blog {
-    background-color: #b3e5fc; /* Pastel blue */
-    color: #333;
-    padding: 60px 20px;
+
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section */
-.contact {
-    background-color: #ffe082; /* Pastel yellow */
+.contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     color: #333;
-    padding: 60px 20px;
-    border-radius: 8px;
+    text-align: center;
 }
+
+/* Form Labels and Fields */
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Submit Button */
+.contact-form button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
 
 /* Form Elements */
 input[type="text"],
@@ -241,8 +256,8 @@ textarea {
 }
 
 input[type="submit"] {
-    background: #ffcc80;
-    color: #333;
+    background: #333; /* Dark gray */
+    color: #fff; /* White text */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -251,20 +266,20 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #ffd54f; /* Darker pastel yellow on hover */
+    background: #555; /* Lighter gray on hover */
 }
 
 /* Footer Styling */
 footer {
-    background: #ffcc80;
-    color: #333;
+    background: #f5f5f5; /* Complementary color (blue) */
+    color: #000; /* Black text */
     text-align: center;
     padding: 30px 20px;
     font-size: 16px;
 }
 
 footer a {
-    color: #333;
+    color: #000; /* Black text */
     text-decoration: none;
     margin: 0 15px;
     font-weight: 500;
@@ -283,7 +298,7 @@ html {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #ffab40;
+    border-color: #f5f5f5; /* Blue border on focus */
     outline: none;
 }
 
@@ -305,17 +320,28 @@ textarea:focus {
         padding: 40px 20px;
     }
 }
+
+/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: red; /* Complementary color (blue) */
+    color: #fff; /* White text */
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
     font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
+.back-to-top.visible {
+    display: block;
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: #007BFF; /* Darker blue on hover */
+}

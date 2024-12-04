@@ -121,4 +121,11 @@ style.textContent = `
     .animate-on-scroll.animate { opacity: 1; transform: translateY(0); }
     .lazy.loaded { opacity: 1; transition: opacity 0.3s; }
 `;
-document.head.appendChild(style);
+
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
