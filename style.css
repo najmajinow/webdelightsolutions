@@ -13,59 +13,70 @@ body {
     background-color: #f5f5f5; /* Light gray background */
 }
 
+
 /* Header Styling */
 header {
-    position: relative;
-    background: #f5f5f5; /* light gray */
+    position: fixed; /* Keep the header always visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5; /* Light gray */
     color: #000; /* Black text */
-    padding: 20px;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    display: none; /* Hidden by default for larger screens */
-    color: #000;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 2;
+    padding: 15px 20px;
+    z-index: 1000; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 /* Navigation Menu Styling */
 nav ul {
     list-style: none;
-    display: flex; /* Default layout for larger screens */
-    gap: 30px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Navigation Links Styling */
+nav ul li {
+    margin: 0;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Black text */
+    font-weight: bold;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show hamburger icon on smaller screens */
-    }
-
     nav ul {
-        display: none; /* Hide the menu by default on smaller screens */
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
         background: #f5f5f5; /* Match header background */
-        padding: 20px 0;
+        position: relative; /* Align under the header */
+        padding: 10px 0;
     }
 
-    nav ul.active {
-        display: flex; /* Show menu when active */
+    nav ul li {
+        margin: 10px 0; /* Add spacing between menu items */
     }
 }
 
-nav ul li {
-    margin: 10px 0; /* Spacing for vertical menu items */
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Hero Section */
 .hero {
