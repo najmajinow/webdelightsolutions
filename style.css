@@ -221,14 +221,14 @@ section {
 }
 
 .portfolio-item {
-    display: inline-block;
-    margin: 20px;
-    width: 30%;
+    display: block; /* Change from inline-block to block for larger images */
+    margin: 20px auto; /* Center the item */
+    width: 80%; /* Adjust to make the images larger */
     text-align: center;
 }
 
 .portfolio-item img {
-    width: 100%;
+    width: 100%; /* Ensure image scales to container width */
     height: auto;
     border-radius: 5px;
 }
@@ -242,6 +242,25 @@ section {
 .portfolio-item a:hover {
     color: #ff5722;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Contact Form Section */
 .contact-form {
