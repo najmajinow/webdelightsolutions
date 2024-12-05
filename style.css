@@ -1,376 +1,230 @@
-/* General Reset */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #000; /* Black text */
-    background-color: #f5f5f5; /* Light gray background */
-    margin: 50px;
 }
 
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #000; /* Black text */
+    font-size: 16px;
+}
 
-/* Header Styling */
+/* Header */
 header {
-    position: fixed; /* Keep the header always visible */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #f5f5f5; /* Light gray */
-    color: #000; /* Black text */
-    padding: 10px 20px; /* Adjusted padding for smaller header */
-    height: 60px; /* Set a specific height for the header */
-    display: flex; /* Use flexbox for centering content */
-    align-items: center; /* Vertically center the content */
-    justify-content: space-between; /* Space out items in the header */
-    z-index: 1000; /* Ensure it appears above other elements */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #fff; /* White background */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo or Text inside the Header */
-header .logo {
-    font-size: 1.5rem; /* Example size for logo */
-    margin-right: 20px; /* Add space between logo and nav */
+nav h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
 }
-
-/* Navigation Menu Styling */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; /* Vertically center the navigation items */
-    flex-grow: 1; /* Allow the nav to grow and take space */
-}
-
-/* Navigation Links Styling */
-nav ul li {
-    margin: 0;
-    padding: 0 15px; /* Horizontal space between navigation items */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #000; /* Black text */
-    font-weight: bold;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center;
-        background: #f5f5f5; /* Match header background */
-        position: relative; /* Align under the header */
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Add spacing between menu items */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Hero Section */
 .hero {
-    background: #f5f5f5; /* Complementary color (gray) */
-    color: #000; /* Black text */
+    background-color: #e0e0e0; /* Light gray background */
     text-align: center;
-    padding: 150px 20px;
+    padding: 100px 20px;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: auto;
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-    background: #333; /* Dark gray */
-    color: #fff; /* White text */
-    padding: 15px 25px;
+    background-color: #333; /* Dark button */
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
-    background: #555; /* Lighter gray on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-/* Section Styling */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 30px;
-    font-weight: 700;
+    background-color: #555;
 }
 
 /* About Section */
 .about {
-    background-color: #f5f5f5; /* Light gray */
-    color: #000; /* Black text */
-    border-radius: 8px;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 /* Services Section */
 .services {
-    background:  grey; /* Complementary color (blue) */
-    color: #000; /* Black text */
-    border-radius: 8px;
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .service-item {
-    margin-bottom: 30px;
+    background-color: #fff;
     padding: 20px;
-    border: 2px solid #333; /* Dark gray border */
-    border-radius: 10px;
-    background: #fff; /* White background */
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.service-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    background: #f8f8f8; /* Lightened background on hover */
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+cite {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
 }
 
 /* Portfolio Section */
-.portfolio {
-    background-color: #f5f5f5; /* Light gray */
-    color: #000; /* Black text */
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+#portfolio {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
 }
 
 .portfolio-item {
-    border: 2px solid #333; /* Dark gray border */
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s;
+    margin-bottom: 30px;
 }
 
-.portfolio-item:hover {
-    transform: scale(1.05);
+.portfolio-item a {
+    text-decoration: none;
+    color: #333;
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
-}
-
-/* Service Section Image Styling */
-.service-item img {
-    max-width: 250px;
-    margin: 0 auto;
-}
-
-/* General Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Testimonials Section */
-.testimonials {
-    background-color: #f5f5f5; /* Light gray */
-    color: #000; /* Black text */
-    padding: 40px;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-blockquote {
-    font-style: italic;
-    margin: 20px 0;
+.portfolio-item p {
+    font-size: 1rem;
 }
-
-
 
 /* Contact Form Section */
 .contact-form {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* Form Labels and Fields */
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+}
+
 .contact-form label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
+    background-color: #f4f4f4;
 }
 
-/* Submit Button */
-.contact-form button {
-    display: block;
-    width: 100%;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-}
-
-.contact-form button:hover {
-    background-color: #0056b3;
-}
-
-
-
-
-/* Form Elements */
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-input[type="submit"] {
-    background: #333; /* Dark gray */
-    color: #fff; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-input[type="submit"]:hover {
-    background: #555; /* Lighter gray on hover */
-}
-
-/* Footer Styling */
-footer {
-    background: #f5f5f5; /* Complementary color (blue) */
-    color: #000; /* Black text */
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 16px;
-}
-
-footer a {
-    color: #000; /* Black text */
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Focus Styling for Form Elements */
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #f5f5f5; /* Blue border on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #333;
     outline: none;
 }
 
-/* Responsive Adjustments */
+.contact-form button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .hero {
-        padding: 100px 20px;
+    .hero-content h2 {
+        font-size: 2rem;
     }
 
-    .hero h1 {
+    .services h2,
+    .testimonials h2,
+    .about h2 {
         font-size: 1.5rem;
     }
 
-    .cta-button {
-        padding: 12px 20px;
+    .service-item {
+        margin-bottom: 15px;
     }
-
-    .section {
-        padding: 40px 20px;
-    }
-}
-
-/* Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: red; /* Complementary color (blue) */
-    color: #fff; /* White text */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-    font-size: 16px;
-    transition: opacity 0.3s ease;
-}
-
-.back-to-top.visible {
-    display: block;
-    opacity: 1;
-}
-
-.back-to-top:hover {
-    background-color: #007BFF; /* Darker blue on hover */
 }
